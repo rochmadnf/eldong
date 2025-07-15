@@ -25,3 +25,4 @@ Thumbs.db
 composer.lock
 pnpm-lock.yaml
 package-lock.json
+/bootstrap/ssr
