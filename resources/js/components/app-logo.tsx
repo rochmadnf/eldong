@@ -1,5 +1,5 @@
 import { ImgHTMLAttributes } from 'react';
 
-export default function AppLogoIcon(props: ImgHTMLAttributes<HTMLImageElement>) {
-    return <img {...props} src="/assets/logo.png" />;
+export default function AppLogo(props: ImgHTMLAttributes<HTMLImageElement>) {
+    return <img {...props} src="/assets/img/logo.png" />;
 }
