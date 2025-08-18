@@ -41,7 +41,7 @@ class HandleInertiaRequests extends Middleware
                 'user' => $request->user(),
             ],
             'app' => [
-                'office_name' => env('APP_OFFICE_NAME', 'Rochmad Labs'),
+                'name' => config('app.name'),
             ],
             'ziggy' => fn(): array => [...(new \Tighten\Ziggy\Ziggy())->toArray(), 'location' => $request->url()],
         ];

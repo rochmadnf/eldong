@@ -3,7 +3,7 @@ import type { Config } from 'ziggy-js';
 export interface SharedData {
     auth: Auth;
     app: {
-        office_name: string;
+        name: string;
     };
     ziggy: Config & { location: string };
     [key: string]: unknown;
