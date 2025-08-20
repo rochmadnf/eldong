@@ -3,14 +3,10 @@ import { InputErrorMessage } from '@/components/input-error-message';
 import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
 import AuthLayout from '@/layouts/auth-layout';
-import type { SharedData } from '@/types';
-import { Head, useForm, usePage } from '@inertiajs/react';
+import { Head, useForm } from '@inertiajs/react';
 import { FormEventHandler } from 'react';
 
 export default function Login() {
-    const {
-        app: { office_name: officeName },
-    } = usePage<SharedData>().props;
     const form = useForm<{
         username: string;
         password: string;
@@ -69,7 +65,7 @@ export default function Login() {
                     </Button>
                 </div>
             </form>
-            <p className="mt-5 text-center text-xs text-slate-900/75">&copy; Since 2025 {officeName}. All Right Reserved.</p>
+            <p className="mt-5 text-center text-xs text-slate-900/75">&copy; Since 2025. All Right Reserved.</p>
         </AuthLayout>
     );
 }

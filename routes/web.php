@@ -2,8 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return to_route('dashboard');
-});
+Route::get('/', \App\Http\Controllers\WelcomeController::class)->name('welcome');
 
 require __DIR__ . '/auth.php';

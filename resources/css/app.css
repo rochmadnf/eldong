@@ -136,4 +136,7 @@
     .bg-gradient-conic {
         background-image: conic-gradient(from 180deg at 50% 50%, var(--color-aprimary), var(--color-asecondary));
     }
+    .bg-gradient-linear {
+        @apply bg-[linear-gradient(135deg,_var(--color-aprimary),_var(--color-asecondary))];
+    }
 }
