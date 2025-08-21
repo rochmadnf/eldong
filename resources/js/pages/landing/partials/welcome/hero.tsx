@@ -1,92 +1,30 @@
+import { InteractiveGridPattern } from '@/components/magicui/interactive-grid-pattern';
 import { Button } from '@/components/ui/button';
-import { Link } from '@inertiajs/react';
-import { Autoplay, EffectFade } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-import { AppLogoIcon } from '@/components/app-logo-icon';
-import 'swiper/css';
-import 'swiper/css/effect-fade';
+import { cn } from '@/lib/utils';
 
 export function HeroSection() {
     return (
-        <section className="relative mx-auto w-full max-w-7xl lg:p-8 xl:px-10 xl:py-6 2xl:px-0">
-            <div className="grid items-center gap-10 lg:grid-cols-12">
-                <div className="lg:col-span-7">
-                    <AppLogoIcon className="fill-slate-900 xl:-mt-16 xl:w-4/5 2xl:w-full" exclamationMarkColor="#FF0000" />
-                    <p className="-mt-4 max-w-2xl text-xl leading-[35px] tracking-[0.5px] text-slate-950">
-                        Setiap laporan Anda adalah langkah penting untuk menciptakan lingkungan yang lebih aman, adil, dan nyaman bagi semua. Jangan
-                        ragu untuk bersuara, karena suara Anda adalah kekuatan untuk perubahan.
-                    </p>
+        <div className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-white via-aprimary/50 to-aprimary/90 px-4">
+            <h1 className="text-4xl leading-11 font-bold tracking-tight text-slate-950">Lapor setiap kejadian dengan mudah, cepat dan aman.</h1>
+            <h3 className="mt-5 text-sm/6 font-medium text-slate-800">
+                <strong>E-Lapor Bupati!</strong> adalah platform layanan digital yang diperuntukkan bagi masyarakat CGA untuk menyampaikan keluhan
+                maupun aspirasi secara langsung kepada pimpinan dengan akses yang mudah, cepat, dan aman melalui situs web atau aplikasi{' '}
+                <em>mobile</em>.
+            </h3>
 
-                    <div className="mt-8 flex flex-wrap items-center gap-3">
-                        <Button
-                            asChild
-                            className="h-12 rounded-xl text-base font-medium tracking-wider transition-all duration-300 xl:h-16 xl:text-lg"
-                            variant="gradient"
-                            size="lg"
-                        >
-                            <Link href="#">Yuk Lapor!</Link>
-                        </Button>
-                        <Button
-                            size="lg"
-                            variant="none"
-                            className="h-12 rounded-xl border border-asecondary bg-transparent text-base font-medium tracking-wider text-asecondary transition duration-150 hover:border-aprimary hover:text-aprimary xl:h-16 xl:text-lg"
-                        >
-                            Cek Laporan
-                        </Button>
-                    </div>
-
-                    <p className="mt-4 text-sm text-slate-700 2xl:text-base">
-                        Identitas pelapor dijaga. Setiap laporan diproses sesuai prosedur yang berlaku.
-                    </p>
-                </div>
-                <div className="lg:col-span-5">
-                    <ImageSlider />
-                </div>
+            <div className="z-1 mt-8 grid w-full grid-cols-1 gap-y-4 md:grid-cols-3">
+                <Button className="col-span-1 font-bold tracking-wide md:col-span-2" variant="pink" size="xl">
+                    Yuk Lapor!
+                </Button>
+                <Button className="col-span-1" variant="secondary" size="xl">
+                    Cek Laporan
+                </Button>
             </div>
-        </section>
-    );
-}
 
-export function ImageSlider() {
-    const IMG_LIST: { id: string; src: string; alt: string }[] = [
-        // {
-        //     id: 'Sw-001',
-        //     src: 'donggala-512x.png',
-        //     alt: 'Logo Pemerintah Kabupaten Donggala',
-        // },
-        {
-            id: 'Sw-002',
-            src: 'bupati.png?v=1',
-            alt: 'Foto Bupati Donggala',
-        },
-        {
-            id: 'Sw-003',
-            src: 'wakil-bupati.png?v=1',
-            alt: 'Foto Wakil Bupati Donggala',
-        },
-    ];
-    return (
-        <div className="mx-auto h-full w-full">
-            <Swiper
-                modules={[Autoplay, EffectFade]}
-                effect="fade"
-                fadeEffect={{ crossFade: true }}
-                spaceBetween={20}
-                slidesPerView={1}
-                loop={true}
-                autoplay={{
-                    delay: 5000,
-                    disableOnInteraction: false,
-                }}
-                className="overflow-hidden rounded-2xl select-none"
-            >
-                {IMG_LIST.map((img) => (
-                    <SwiperSlide key={img.id}>
-                        <img src={`/assets/img/${img.src}`} alt={img.alt} loading="lazy" className="h-auto w-full object-contain" />
-                    </SwiperSlide>
-                ))}
-            </Swiper>
+            <InteractiveGridPattern
+                className={cn('[mask-image:radial-gradient(400px_circle_at_center,white,transparent)]', 'inset-x-0 h-[120%] skew-y-12')}
+                squaresClassName="stroke-red-900/20 hover:fill-red-900/30"
+            />
         </div>
     );
 }

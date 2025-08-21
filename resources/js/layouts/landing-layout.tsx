@@ -6,10 +6,10 @@ import { PropsWithChildren, useEffect, useState } from 'react';
 
 export function LandingLayout({ children }: PropsWithChildren) {
     return (
-        <section className="flex min-h-screen w-full flex-col items-center">
-            <Header />
+        <main className="h-full w-full">
+            {/* <Header /> */}
             {children}
-        </section>
+        </main>
     );
 }
 
