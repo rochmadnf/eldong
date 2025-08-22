@@ -22,7 +22,7 @@ const buttonVariants = cva(
                     'border border-slate-900/10 hover:border-destructive hover:bg-destructive/90 hover:text-white',
         secondary:
           "bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/80",
-        pink: 'bg-pink-600 text-white shadow-xs shadow-pink-600 hover:bg-pink-600/80 hover:shadow-pink-600/80',
+        pink: 'bg-pink-600 text-pink-100 shadow-xs shadow-pink-600 hover:bg-pink-600/80 hover:shadow-pink-600/80',
         ghost:
           "hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50",
         link: "text-primary underline-offset-4 hover:underline",
@@ -32,7 +32,7 @@ const buttonVariants = cva(
         default: "h-9 px-4 py-2 has-[>svg]:px-3",
         sm: "h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5",
         lg: "h-10 rounded-md px-6 has-[>svg]:px-4",
-        xl: "h-12 text-base",
+        xl: "h-12 text-base xl:h-14 xl:text-lg",
         icon: "size-9",
         full: 'w-full h-12 rounded-md px-4 py-2 text-base',
       },
