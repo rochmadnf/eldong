@@ -4,6 +4,10 @@ export interface SharedData {
     auth: Auth;
     app: {
         name: string;
+        url: {
+            full: string;
+            base: string;
+        };
     };
     ziggy: Config & { location: string };
     [key: string]: unknown;

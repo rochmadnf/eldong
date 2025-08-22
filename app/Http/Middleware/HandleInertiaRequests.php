@@ -42,6 +42,10 @@ class HandleInertiaRequests extends Middleware
             ],
             'app' => [
                 'name' => config('app.name'),
+                'url' => [
+                    'full' => $request->fullUrl(),
+                    'base' => $request->url(),
+                ],
             ],
             'ziggy' => fn(): array => [...(new \Tighten\Ziggy\Ziggy())->toArray(), 'location' => $request->url()],
         ];
