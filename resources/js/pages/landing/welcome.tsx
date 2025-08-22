@@ -1,17 +1,15 @@
+import { Metadata } from '@/components/metadata';
 import { LandingLayout } from '@/layouts/landing-layout';
-import { Head } from '@inertiajs/react';
 import { ReactNode } from 'react';
 import { HeroSection } from './partials/welcome/hero';
 
 export default function WelcomeIndex() {
     return (
         <>
-            <Head title="Selamat Datang">
-                <meta
-                    name="description"
-                    content="E-Lapor Bupati! adalah platform layanan digital untuk menyampaikan keluhan maupun aspirasi kepada Pemerintah Daerah Kabupaten Donggala dengan akses mudah, cepat dan aman."
-                />
-            </Head>
+            <Metadata
+                title="Selamat Datang"
+                description="E-Lapor Bupati! adalah platform layanan digital untuk menyampaikan keluhan maupun aspirasi kepada Pemerintah Daerah Kabupaten Donggala dengan akses mudah, cepat dan aman."
+            ></Metadata>
             <HeroSection />
         </>
     );
