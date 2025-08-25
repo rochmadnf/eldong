@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils';
 
 export function HeroSection() {
     return (
-        <div className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-white via-aprimary/50 to-aprimary/90 px-4 xl:px-32">
+        <div className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-white via-aprimary/50 to-aprimary/90 px-4 xl:px-32 [@media(height<=480px)and(width<=400)]:pt-22">
             <h1 className="w-full text-4xl font-bold tracking-tight text-slate-950 xl:max-w-4xl xl:text-center xl:text-6xl/tight">
                 Lapor setiap kejadian dengan{' '}
                 <Highlighter action="underline" color="#E60076" iterations={3} animationDuration={2000}>
