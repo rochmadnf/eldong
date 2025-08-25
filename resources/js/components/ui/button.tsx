@@ -22,7 +22,7 @@ const buttonVariants = cva(
                     'border border-slate-900/10 hover:border-destructive hover:bg-destructive/90 hover:text-white',
         secondary:
           "bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/80",
-        pink: 'bg-pink-600 text-pink-100 shadow-xs shadow-pink-600 hover:bg-pink-600/80 hover:shadow-pink-600/80',
+        pink: 'bg-[#ec3489] text-pink-100 shadow-xs shadow-[#ec3489] hover:bg-[#e91d80] hover:shadow-[#e91d80]',
         ghost:
           "hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50",
         link: "text-primary underline-offset-4 hover:underline",

@@ -30,7 +30,7 @@ export function HeroSection() {
                 <Button className="col-span-1 font-bold tracking-wide" variant="pink" size="xl">
                     Yuk Lapor!
                 </Button>
-                <Button className="col-span-1 font-bold text-pink-600" variant="secondary" size="xl">
+                <Button className="col-span-1 bg-secondary/65 font-bold text-[#ec3489] hover:bg-secondary/80" variant="secondary" size="xl">
                     Cek Laporan
                 </Button>
             </div>
