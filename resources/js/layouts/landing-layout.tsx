@@ -9,7 +9,7 @@ import { Dispatch, PropsWithChildren, SetStateAction, useEffect, useState } from
 export function LandingLayout({ children }: PropsWithChildren) {
     const [openDrawer, setOpenDrawer] = useState<boolean>(false);
     return (
-        <main className="h-full w-full">
+        <main className="relative mx-auto h-full max-w-[428px]">
             <Header openDrawer={openDrawer} setOpenDrawer={setOpenDrawer} />
             {children}
             <Drawer open={openDrawer} onOpenChange={setOpenDrawer}>
@@ -34,9 +34,9 @@ export function LandingLayout({ children }: PropsWithChildren) {
                         </button>
                     </div>
 
-                    <DrawerFooter>
+                    <DrawerFooter className="max-w-[428px]">
                         <h5 className="mb-2 font-bold">Akun</h5>
-                        <div className="flex w-full items-center-safe gap-x-2">
+                        <div className="flex max-w-[428px] items-center-safe gap-x-2">
                             <Button variant={'none'} className="w-1/2 bg-white font-medium ring-1 ring-pink-400 hover:bg-pink-50" size={'xl'} asChild>
                                 <Link prefetch href={route('login')}>
                                     Masuk
@@ -87,14 +87,13 @@ export function Header({ openDrawer, setOpenDrawer }: HeaderProps) {
     return (
         <header
             className={cn(
-                'fixed top-0 left-1/2 z-[400] mx-auto flex h-16 w-full max-w-5xl -translate-x-1/2 flex-row items-center justify-between bg-white px-4 shadow shadow-gray-300 transition-all duration-700 ease-in-out xl:rounded-b-2xl',
-                visibility ? 'xl:top-4 xl:rounded-t-2xl' : 'xl:rounded-t-none',
+                'fixed top-0 left-1/2 z-[400] mx-auto flex h-16 w-[428px] max-w-5xl -translate-x-1/2 flex-row items-center justify-between bg-white px-4 shadow shadow-gray-300 transition-all duration-700 ease-in-out',
             )}
         >
             <Link prefetch href={route('welcome')}>
                 <AppLogoIcon className="w-28 fill-slate-900" exclamationMarkColor="#FF0000" />
             </Link>
-            <div className="hidden items-center-safe justify-end gap-x-2 lg:flex">
+            <div className="hidden items-center-safe justify-end gap-x-2">
                 <Button variant={'none'} className="bg-white font-medium ring-1 ring-pink-400 hover:bg-pink-50" size={'lg'} asChild>
                     <Link prefetch href={route('login')}>
                         Masuk
@@ -107,7 +106,7 @@ export function Header({ openDrawer, setOpenDrawer }: HeaderProps) {
 
             <button
                 onClick={() => setOpenDrawer(!openDrawer)}
-                className="inline-flex size-8 cursor-pointer items-center justify-center rounded-xs border-2 border-white bg-gray-200 text-slate-700 ring-1 ring-black/30 transition duration-150 hover:bg-gray-300 lg:hidden"
+                className="inline-flex size-8 cursor-pointer items-center justify-center rounded-xs border-2 border-white bg-gray-200 text-slate-700 ring-1 ring-black/30 transition duration-150 hover:bg-gray-300"
             >
                 <PlusIcon
                     className={cn('pointer-events-none size-5 transform transition-transform duration-300', openDrawer ? 'rotate-45' : 'rotate-0')}
