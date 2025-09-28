@@ -38,4 +38,11 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function uniqueIds(): array
+    {
+        return [
+            'uuid',
+        ];
+    }
 }
