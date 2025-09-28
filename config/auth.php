@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Auth;
+
 return [
     /*
     |--------------------------------------------------------------------------
@@ -39,6 +41,10 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'officer' => [
+            'driver' => 'session',
+            'provider' => 'officers',
+        ]
     ],
 
     /*
@@ -61,13 +67,13 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => env('AUTH_MODEL', App\Models\User::class),
+            'model' => Auth\User::class,
         ],
 
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+        'officers' => [
+            'driver' => 'eloquent',
+            'model' => Auth\Officer::class,
+        ]
     ],
 
     /*

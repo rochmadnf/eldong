@@ -45,7 +45,7 @@ export default function Login() {
                 </div>
 
                 <div>
-                    <Label htmlFor="password">Kata Sandi</Label>
+                    <Label htmlFor="password">Katasandi</Label>
                     <Input
                         id="password"
                         name="password"
@@ -60,7 +60,7 @@ export default function Login() {
                 </div>
 
                 <div className="flex items-center justify-between">
-                    <Button size="full" disabled={form.processing}>
+                    <Button size="full" variant="pink" disabled={form.processing}>
                         Masuk
                     </Button>
                 </div>
